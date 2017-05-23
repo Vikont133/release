@@ -15,4 +15,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <tagBase>https://github.com/Vikont133/release/tags</tagBase>
+          <branchBase>https://github.com/Vikont133/release/branches</branchBase>
+          <preparationGoals>clean</preparationGoals>
+          <goals>install</goals>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <scm>
+    <connection>scm:git:https://github.com/Vikont133/release.git</connection>
+  </scm>
 </project>
